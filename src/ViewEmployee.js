@@ -8,7 +8,7 @@ export default function ViewEmployee() {
   const navigate = useNavigate()
 
   const getEmployee = ()=>{
-    fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/profile")
+    fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/student")
     .then((data) => data.json())
     .then((response) => setData(response));
   }
