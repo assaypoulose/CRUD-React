@@ -10,7 +10,7 @@ export default function ShowAllEmployee() {
   const navigate = useNavigate()
 
   const getEmployee = ()=>{
-    fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/profile")
+    fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/student")
     .then((data) => data.json())
     .then((response) => setData(response));
   }
@@ -19,7 +19,7 @@ export default function ShowAllEmployee() {
   },[]);
 
   const handleDelete = (id)=> {
-    fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/profile/"+id, {method : 'DELETE'})
+    fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/student/"+id, {method : 'DELETE'})
     .then((data)=>data.json())
     .then((response)=>getEmployee());
   };
