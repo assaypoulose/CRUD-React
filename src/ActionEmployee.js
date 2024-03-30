@@ -22,7 +22,7 @@ export default function ActionEmployee() {
 
   useEffect(()=>{
     if(id){
-      fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/profile/"+id)
+      fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/student/"+id)
     .then((data) => data.json())
     .then((response) => setFormValues(response));
     }
@@ -30,7 +30,7 @@ export default function ActionEmployee() {
 
   const handleSubmit = () => {
     if(id){
-      fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/profile/"+id, {
+      fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/student/"+id, {
       method:'PUT',
       body:JSON.stringify(formValues),
       headers : {
@@ -43,7 +43,7 @@ export default function ActionEmployee() {
       navigate(-1);
     });
     }else{
-    fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/profile", {
+    fetch("https://65fda9d1b2a18489b3853c1e.mockapi.io/api/v2/student", {
       method:'POST',
       body:JSON.stringify(formValues),
       headers : {
